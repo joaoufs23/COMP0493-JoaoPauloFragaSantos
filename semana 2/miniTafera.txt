@@ -1,0 +1,115 @@
+Questão 1)
+A) Você sabe como armazenar uma string na sua linguagem favorita?
+Sim, em python usa o seguinte comando: minhaString = “minha string é essa aqui”
+
+B) Como ler a entrada de um texto linha por linha?
+Para fazer isso em python é dessa forma:
+with open(“arquivoDeTexto.txt”, “r”) as file:
+	for linha in file:
+		print(linha.strip())
+
+C) Como concatenar 2 strings em uma maior?
+Para fazer isso em python basta seguir as seguintes linhas de comando:
+string1 = “Bom”
+String = “dia”
+StringFinal = string 1 + “ ” + string 2
+
+D) como verificar se uma string começa com “.......” para parar de ler a entrada?
+Para fazer isso em python, segue o seguinte comando:
+
+with open(“meuArquivoDeTexto.txt”, “r”) as file:
+    for linha in file:
+        if linha.startswith("......."):
+            print("Linha encontrada! Parando a leitura.")
+            break  # Estou usando o break para parar de ler
+        print(linha.strip())
+
+
+Questão 2)
+Como encontrar a primeira ocorrência de uma substring em uma string (se houver)?
+Para isso vou usar o find para fazer isso em python:
+t = “texto grande texto de teste apenas, para saber mais sobre o texto de texto”
+s = “texto”
+indiceDaPrimeiraOcorrencia = t.find(s)
+print(indiceDaPrimeiraOcorrencia)
+
+Como encontrar a próxima ocorrências de uma substrings em uma string (se houver)?
+Para fazer isso, segue o seguinte código:
+t = “texto grande texto de teste apenas, para saber mais sobre o texto de texto”
+s = “texto”
+indice = t.find(s)
+listaDeIndices = []
+while indice != -1:
+	listaDeIndices.append(indice)
+	indice = t.find(P, indice + 1)
+print(listaDeIndices)
+
+
+Questão 3)  aqui está o código em python:
+t = “texto grande texto de teste apenas, para saber mais sobre o texto de texto”
+
+digitos = 0
+vogais = 0
+consoantes = 0
+
+ConjVogais = “AEIOUaeiou”
+
+for char in t:
+	if char.isdigit():
+		digitos += 1
+	elif char.isalpha():
+		if char in conjVogais:
+vogais += 1
+		else:
+			consoantes += 1
+	
+	resultado = t.lower()
+	print(f”Digitos: {digitos}”)
+	print(f”Vogais: {vogais}”)
+	print(f”consoantes: {consoantes}”)
+	print(f”String em minúsculas: {resultado}”)
+
+
+Questão 4)
+Como tokenizar uma string?
+Seguinte o seguinte código:
+A = “hoje é um bom dia para trabalhar”
+lista = a.split()
+print(lista)
+Como armazenar em uma array de tokens menores?
+No python, quando a pessoa usa o método split, automaticamente já cria um array, por exemplo, no código acima, “lista = a.split()”, lista já é o array 
+Como ordenar o array em ordem lexicograficamente?
+Para fazer isso em python basta usar o método sort, no caso ficaria assim:
+lista.sort()
+
+
+
+
+Questão 5) Para responder essa questão, estamos usando o dicionário em python como estrutura de dados.
+
+from collections import Counter
+def palavra_mais_frequente(texto):
+    palavras = texto.split()
+    contador = Counter(palavras)
+    palavra, frequencia = contador.most_common(1)[0]
+    return palavra, frequencia
+
+texto = "texto, esse é apenas um texto sobre texto, falando apenas sobre texto"
+palavra, frequencia = palavra_mais_frequente(texto)
+print(f"A palavra mais frequente é '{palavra}' e aparece {frequencia} vezes.")
+
+
+
+Questão 6) Com relação a pergunta de como ler uma string sem conhecer o seu tamanho, em python não temos esse problema 
+
+string = “esse é um texto qualquer falando sobre outros textos”
+
+lines = text.splitlines()
+
+for i in range(len(lines)):
+	if lines[i].startswith(“.......”):
+		last_line = lines[i+1]
+		beak
+num_chars = len(last_line)
+
+print(f”A última linha tem {num_chars}”)
