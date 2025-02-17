@@ -1,9 +1,9 @@
 def countingSort(myArray):
-    if len(myArray) == 0: # aqui estou olhando se a lista está fazia, se tiver, eu retorno a lista
+    if len(myArray) == 0:
         return myArray
-    valorMaximo = max(myArray) # aqui esou pegando o valor máximo e na outra linha o valor minimo, já que é necessário
+    valorMaximo = max(myArray)
     valorMinimo = min(myArray)
-    valorIntervalo = valorMaximo - valorMinimo + 1 # aqui estou criando as listas necessárias, e pegando o tamanho da lista
+    valorIntervalo = valorMaximo - valorMinimo + 1
     listaDeContagem = [0] * valorIntervalo
     listaDeSaida = [0] * len(myArray)
     
